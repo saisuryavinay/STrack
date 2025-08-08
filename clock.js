@@ -30,7 +30,7 @@ function start() {
     }, 10); 
 }
 
-document.getElementsByClassName("btn b2")[0].addEventListener('click', function () {
+document.getElementsByClassName("btn b3")[0].addEventListener('click', function () {
     clearInterval(intervalId);
 
     milliseconds = 0;
@@ -39,3 +39,4 @@ document.getElementsByClassName("btn b2")[0].addEventListener('click', function 
     document.getElementsByClassName("child2")[0].innerText = "00";
     document.getElementsByClassName("child3")[0].innerText = "00";
 });
+
