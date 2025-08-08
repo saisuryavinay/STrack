@@ -1,0 +1,66 @@
+<!-- Stopwatch  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StopWatch</title>
+  <link rel="stylesheet" href="clock.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="C:\Users\D.Sai Surya Vinay\Downloads\stop-watch.png">
+</head>
+<body>
+  <div class="parent">
+    <div class="stopwatch-header">
+      <h3>STOPWATCH</h3>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.j_6vrV_oJ0QUu6S7HdTLkQHaHa?r=0&cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Stopwatch Icon">
+    </div>
+    <div class="circles">
+      <div class="child1">00</div>
+      <div class="child2">00</div>
+      <div class="child3">00</div>
+    </div>
+    <div class="buttons">
+      <div class="btn b1" onclick="timer()">Start</div>
+      <div class="btn b2" onclick="Stop()" style="background-color: #dc3545;">Stop</div>
+      <div class="btn b3" onclick="reset()">Reset</div>
+    </div>
+  </div>
+  <script>
+    let timerInterval;
+    let seconds = 0, minutes = 0, hours = 0;
+
+    function timer() {
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        seconds++;
+        if (seconds >= 60) {
+          seconds = 0;
+          minutes++;
+        }
+        if (minutes >= 60) {
+          minutes = 0;
+          hours++;
+        }
+        document.querySelector('.child1').textContent = String(hours).padStart(2, '0');
+        document.querySelector('.child2').textContent = String(minutes).padStart(2, '0');
+        document.querySelector('.child3').textContent = String(seconds).padStart(2, '0');
+      }, 1000);
+    }
+
+    function Stop() {
+      clearInterval(timerInterval);
+    }
+    function reset() {
+      clearInterval(timerInterval);
+      seconds = 0;
+      minutes = 0;
+      hours = 0;
+      document.querySelector('.child1').textContent = '00';
+      document.querySelector('.child2').textContent = '00';
+      document.querySelector('.child3').textContent = '00';
+    }
+
+  </script>
+</body>
+</html>
