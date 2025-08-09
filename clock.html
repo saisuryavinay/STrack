@@ -1,4 +1,4 @@
-<!-- TIMER  -->
+<!-- TIMER -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Timer</title>
   <link rel="stylesheet" href="clock.css" />
+  <link rel="icon" href="C:\Users\D.Sai Surya Vinay\Downloads\clock.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="parent">
-    <h3 style="font-family: Georgia, 'Times New Roman', Times, serif;">TIMER</h3>
+    <div class="box" onclick="Stopwatch()">
+      <span class="text-label">Switch to Stopwatch</span>
+      <span class="icon-label"><i class="fas fa-stopwatch"></i></span>
+    </div>
+
+    <h3 class="timer-title">TIMER</h3>
     <div class="circles">
       <div class="child1">00</div>
       <div class="child2">00</div>
       <div class="child3">00</div>
     </div>
+
     <div class="buttons">
       <div class="btn b1" onclick="timer()">Start</div>
       <div class="btn b3">Reset</div>
