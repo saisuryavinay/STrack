@@ -39,4 +39,10 @@ document.getElementsByClassName("btn b3")[0].addEventListener('click', function 
     document.getElementsByClassName("child2")[0].innerText = "00";
     document.getElementsByClassName("child3")[0].innerText = "00";
 });
+function Stopwatch() {
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.href = 'stopwatch.html';
+    }, 500);
+}
 
